@@ -1,0 +1,119 @@
+.footer{
+    background: #011343;
+    padding: 105px 0px;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    flex: 4;
+}
+.footer-social-title{
+    font-family: "se-bold";
+    font-size: 25px;
+    color: white;
+    margin: 0;
+}
+.footer-social-items{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 32px;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    flex: 2;
+}
+.footer-links-title{
+    font-family: "se-bold";
+    font-size: 25px;
+    color: white;
+    margin: 0;
+}
+.footer-links-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+.footer-links-item{
+    font-family: "ex-light";
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+.footer-about{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: right;
+    flex: 5;
+}
+.footer-about-title{
+    font-family: "se-bold";
+    font-size: 25px;
+    color: white;
+    margin: 0;
+}
+.footer-about-desc{
+    font-family: "light";
+    font-size: 25px;
+    color: white;
+}
+.footer-social{
+    border-right: 5px solid #19A3A6;
+}
+.footer-links{
+    border-right: 5px solid #19A3A6;
+}
+@media only screen and (max-width:768px){
+    .footer{
+        padding: 20px 0px;
+    }
+    .footer-wrapper{
+        flex-direction: column-reverse;
+    }
+    .footer-about{
+        border-bottom: 5px solid #19A3A6;
+        text-align: center;
+        gap: 10px;
+    }
+    .footer-about-desc{
+        font-size: 20px;
+    }
+    .footer-about-title{
+        margin: 20px 0px;
+        font-size: 25px;
+    }
+    .footer-links{
+        border-right: none;
+        border-bottom: 5px solid #19A3A6;
+        gap: 10px;
+    }
+    .footer-links-item{
+        font-size: 25px;
+    }
+    .footer-links-items{
+        margin-bottom: 20px;
+    }
+    .footer-links-title{
+        margin: 20px 0px;
+        font-size: 25px;
+    }
+    .footer-social{
+        border: none;
+        gap: 10px;
+    }
+    .footer-social-title{
+        text-align: center;
+        margin: 20px 0px;
+        font-size: 25px;
+    }
+}

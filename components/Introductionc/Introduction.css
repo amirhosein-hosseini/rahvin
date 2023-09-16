@@ -1,0 +1,40 @@
+.introduction-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 40px;
+    margin-bottom: 45px;
+}
+.introduction-way{
+    font-family: "se-bold";
+    font-size: 30px;
+    color: #19A3A6;
+    text-align: center;
+}
+.introduction-desc{
+    font-family: "light";
+    font-size: 25px;
+    color: #141414;
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 40px;
+}
+.introduction-title{
+    font-family: "se-bold";
+    font-size: 27px;
+    color: #141414;
+    text-align: right;
+}
+@media only screen and (max-width:768px){
+    .introduction-wrapper{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .introduction-way{
+        font-size: 25px;
+    }
+    .introduction-desc{
+        font-size: 20px;
+    }
+    .introduction-title{
+        font-size: 20px;
+    }
+}

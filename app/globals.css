@@ -1,0 +1,53 @@
+html{
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+  margin: 0;
+  background: #F2F2F2;
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../public/fonts/PeydaWeb-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "bold";
+  src: url("../public/fonts/PeydaWeb-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ex-bold";
+  src: url("../public/fonts/PeydaWeb-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "light";
+  src: url("../public/fonts/peydaWeb-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "se-bold";
+  src: url("../public/fonts/PeydaWeb-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "black";
+  src: url("../public/fonts/PeydaWeb-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ex-light";
+  src: url("../public/fonts/peydaWeb-extralight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "medium";
+  src: url("../public/fonts/PeydaWeb-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "thin";
+  src: url("../public/fonts/PeydaWeb-Thin.woff2") format("woff2");
+}
+
+
+.container{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}

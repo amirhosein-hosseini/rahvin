@@ -1,0 +1,152 @@
+.contact-page-titles{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 49px;
+}
+.contact-page-first-title{
+    font-family: "ex-bold";
+    font-size: 40px;
+    color: #19A3A6;
+    margin-bottom: 25px;
+}
+.contact-page-second-title{
+    font-family: "regular";
+    font-size: 30px;
+    color: #000000;
+    margin-top: 0;
+}
+.contact-page-wrapper form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.form-group{
+    width: 100%;
+    text-align: center;
+}
+.form-group-two{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 24px;
+}
+.form-group-two input{
+    flex: 1;
+    width: 100%;
+    text-align: right;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: "light";
+    font-size: 25px;
+    color: #797979;
+}
+.form-group-two input:focus{
+    border: none !important;
+}
+.form-group-two input::placeholder{
+    font-family: "light";
+    font-size: 25px;
+    color: #797979;
+}
+.form-group textarea{
+    width: 93.2%;
+    text-align: right;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    height: 280px;
+    font-family: "light";
+    font-size: 25px;
+    color: #797979;
+    resize: none;
+}
+.form-group textarea:focus{
+    border: none;
+}
+.form-group textarea::placeholder{
+    font-family: "light";
+    font-size: 25px;
+    color: #797979;
+}
+.submit{
+    margin-bottom: 66px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.submit-social{
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+}
+.submit-social-items{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    align-items: center;
+}
+.submit-social-item{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.submit-social-item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.submit-social p{
+    font-family: "ex-bold";
+    font-size: 25px;
+    color: black;
+}
+@media only screen and (max-width:768px){
+    .form-group-two{
+        flex-direction: column;
+    }
+    .contact-page-first-title{
+        font-size: 23px;
+    }
+    .contact-page-second-title{
+        font-size: 20px;
+    }
+    .form-group-two input{
+        font-size: 20px;
+        width: 76%;
+        margin: 0 auto;
+    }
+    .form-group textarea{
+        font-size: 20px;
+        width: 76%;
+        margin: 0 auto;
+    }
+    .form-group-two input::placeholder{
+        font-size: 20px;
+    }
+    .form-group textarea::placeholder{
+        font-size: 20px;
+    }
+    .submit{
+        flex-direction: column;
+    }
+    .submit-social{
+        flex-direction: column-reverse;
+        gap: 21px;
+    }
+    .submit-social p{
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 17px;
+        font-size: 25px;
+    }
+    .submit-button{
+        width: 100%;
+    }
+    .submit-button button{
+        width: 100%;
+    }
+}

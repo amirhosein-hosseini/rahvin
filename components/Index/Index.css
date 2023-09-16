@@ -1,0 +1,19 @@
+.home-slideshow-topic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.home-slideshow-title{
+    font-family: "se-bold";
+    font-size: 25px;
+    color: #141414;
+    margin: 0;
+}
+.home-slideshow-link{
+    font-family: "se-bold";
+    font-size: 27px;
+    color: #19A3A6;
+    text-decoration: none;
+}

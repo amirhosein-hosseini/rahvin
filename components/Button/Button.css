@@ -1,0 +1,10 @@
+.blue-button{
+    background: #19A3A6;
+    border-radius: 10px;
+    padding: 15px 65px;
+    border: none;
+    font-family: "ex-bold";
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.podcastbutton{
+    border: none;
+    border-radius: 10px;
+    font-family: "ex-bold";
+    font-size: 15px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.podcastbutton.aparat{
+    background: #FF2BCE;
+}
+.podcastbutton.castbox{
+    background: #FFA04E;
+}
+.podcastbutton.youtube{
+    background: #FF3D3D;
+}
+.podcastbutton.instagram{
+    background: #6D32B0;
+}
+@media only screen and (max-width:768px){
+    .podcastbutton{
+        width: 100%;
+    }
+}
