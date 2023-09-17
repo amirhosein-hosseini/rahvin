@@ -21,11 +21,12 @@ export default function Page({ params }) {
             console.log(error)
           })
     },[])
-    console.log(blog)
+    const banner =  blog.banner_file;
+    const cover =  blog.cover_file;
 
     return(
         <>
-            <Singlec title={blog.title} desc={blog.description} slug={blog.slug} keyword={blog.keyword} related={rela}/>
+            <Singlec title={blog.title} desc={blog.description} slug={blog.slug} keyword={blog.keyword} related={rela} body={blog.body} cover={cover} banner={banner}/>
         </>
     ) 
 }

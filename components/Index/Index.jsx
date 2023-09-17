@@ -41,7 +41,7 @@ const Index = () => {
                     </div>
                     <Slideshow>
                         {item.items.map((itemy)=>(
-                            <ProductItem title={itemy.title} desc={itemy.description} src={"http://rahvin.ir"+itemy.cover_file}/>
+                            <ProductItem title={itemy.title} desc={itemy.description} src={"http://rahvin.ir"+itemy.cover_file} slug={itemy.slug} clas={itemy.class}/>
                         ))}
                     </Slideshow>
                 </div>

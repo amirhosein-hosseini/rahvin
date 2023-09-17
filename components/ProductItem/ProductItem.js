@@ -2,9 +2,10 @@ import Image from "next/image";
 import "./ProductItem.css";
 import productimage from "../../public/prductimage.png";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 
-const ProductItem = ({title , desc , src}) => {
+const ProductItem = ({title , desc , src , slug , clas}) => {
     return(
         <div className="product-item">
             <div className="product-item-image">
@@ -20,9 +21,14 @@ const ProductItem = ({title , desc , src}) => {
                     {desc}
                 </p>
             </div>
-            <Button>
-                مطالعه کامل
-            </Button>
+            {clas == "App\\Models\\Blog" ? 
+                <Link href={`/Single/${slug}`}>
+                    <Button>
+                        مطالعه کامل
+                    </Button>
+                </Link> : 
+                <Button>مطالعه کامل  </Button>
+            }
         </div>
     )
 }
