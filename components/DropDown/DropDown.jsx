@@ -6,7 +6,7 @@ import axios from "axios";
 const DropDown = () => {
     const [categories,setCategories] = useState([])
     const [subCategories , setSubCategories] = useState([])
-    const [subnumber , setSubnumber] = useState([])
+    const [subnumber , setSubnumber] = useState()
     
 
 
@@ -30,7 +30,7 @@ const DropDown = () => {
           // handle error
           console.log(error)
         })
-    }, [])
+    }, [categories])
 
 
 

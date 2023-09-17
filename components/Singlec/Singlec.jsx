@@ -1,15 +1,36 @@
+"use client"
+import axios from "axios";
 import "./Singlec.css";
 import Image from "next/image";
 import ProductItem from "../ProductItem/ProductItem";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const Singlec = ({title , desc , files = null , slug , keyword , related , cover , body , banner}) =>{
+
+    const [mostView , setMostView] = useState([])
+
     let bannery = null;
     let covery = null;
     banner == undefined ? bannery = "" : bannery = "http://rahvin.ir" + banner;
     cover == undefined ? covery = "" : covery = "http://rahvin.ir" + cover;
 
-    console.log(body)
+
+
+
+    useEffect(()=>{
+        axios.get("http://rahvin.ir/api/v1/blogs/view-count")
+        .then(function (response) {
+            // handle success
+            setMostView(response.data.data)
+          })
+          .catch(function (error) {
+            // handle error
+            console.log(error)
+          })
+    },[])
+
+
 
     return(
         <div className="container">
@@ -42,31 +63,15 @@ const Singlec = ({title , desc , files = null , slug , keyword , related , cover
                                 مطالب پربازدید
                             </p>
                         </div>
-                        <div className="single-left-item">
-                            <p>
-                                شهر بازی ها
-                            </p>
-                        </div>
-                        <div className="single-left-item">
-                            <p>
-                                شهر بازی ها
-                            </p>
-                        </div>
-                        <div className="single-left-item">
-                            <p>
-                                شهر بازی ها
-                            </p>
-                        </div>
-                        <div className="single-left-item">
-                            <p>
-                                شهر بازی ها
-                            </p>
-                        </div>
-                        <div className="single-left-item">
-                            <p>
-                                شهر بازی ها
-                            </p>
-                        </div>
+                        {mostView.map((item)=>(
+                            <div className="single-left-item">
+                                <Link href={`/Single/${item.slug}`} style={{textDecoration:"none"}}>
+                                    <p>
+                                        {item.title}
+                                    </p>
+                                </Link>
+                            </div>
+                        ))}
                     </div>
                     <div className="single-left-banner">
                         <Image src={bannery} sizes="100vw" width={200} height={200} style={{width: '100%',height: 'auto',}} alt="image" />

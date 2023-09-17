@@ -1,28 +1,41 @@
 import "./Introduction.css";
 import ProductItem from "../ProductItem/ProductItem";
 
-const Introductionc = () => {
+const Introductionc = ({title , items , desc , category}) => {
+    let itemss = null;
+    let categoryy = [];
+    let route = null;
+
+    items == undefined ? itemss = [] : itemss = items; 
+    category == undefined ? categoryy = [] : categoryy = category;
+
+
+
+    route = categoryy.title + "/"
+
+    while (categoryy.parent != null){
+        route = route + categoryy.parent.title + "/";
+        categoryy = categoryy.parent;
+    }
+
+
+
+
     return(
         <div className="container">
             <div className="introduction-header">
-                <p className="introduction-way">معرفی / اوغات فراغت / آخر هفته</p>
+                <p className="introduction-way">{route}</p>
                 <p className="introduction-desc">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را                 
+                    {desc}
                 </p>
                 <p className="introduction-title">
-                    آخرین مطالب
+                    {title}
                 </p>
             </div>
             <div className="introduction-wrapper">
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
+                {itemss.map((item)=>(
+                    <ProductItem title={item.title} desc={item.description} src={"http://rahvin.ir" + item.cover_file} slug={item.slug} clas={item.class} />
+                ))}
             </div>
         </div>
     )

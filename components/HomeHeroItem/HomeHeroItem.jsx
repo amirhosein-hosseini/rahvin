@@ -9,7 +9,6 @@ import Link from "next/link";
 
 const HomeHeroItem = ({title , desc , slug , date , src , clas}) => {
 
-    console.log(clas)
     return(
         <>
                 <div className="home-carousel-item">
