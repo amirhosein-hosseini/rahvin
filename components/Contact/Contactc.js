@@ -38,7 +38,7 @@ const Contactc = () =>{
             message : data.description
         }
 
-        axios.post("http://rahvin.ir/api/v1/contact-us", ourUserData).then((response) => {
+        axios.post("http://172.16.16.210:7500/api/v1/contact-us", ourUserData).then((response) => {
             console.log(response.status, response.massage);
         });
     }

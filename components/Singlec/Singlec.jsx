@@ -12,14 +12,14 @@ const Singlec = ({title , desc , files = null , slug , keyword , related , cover
 
     let bannery = null;
     let covery = null;
-    banner == undefined ? bannery = "" : bannery = "http://rahvin.ir" + banner;
-    cover == undefined ? covery = "" : covery = "http://rahvin.ir" + cover;
+    banner == undefined ? bannery = "" : bannery = "http://172.16.16.210:7500" + banner;
+    cover == undefined ? covery = "" : covery = "http://172.16.16.210:7500" + cover;
 
 
 
 
     useEffect(()=>{
-        axios.get("http://rahvin.ir/api/v1/blogs/view-count")
+        axios.get("http://172.16.16.210:7500/api/v1/blogs/view-count")
         .then(function (response) {
             // handle success
             setMostView(response.data.data)
@@ -86,7 +86,7 @@ const Singlec = ({title , desc , files = null , slug , keyword , related , cover
                 </div>
                 <div className="single-related-wrapper">
                     {related.map((item)=>(
-                        <ProductItem title={item.title} desc={item.description} src={"http://rahvin.ir/"+item.cover_file} />
+                        <ProductItem title={item.title} desc={item.description} src={"http://172.16.16.210:7500/"+item.cover_file} />
                     ))}
                 </div>
             </div>

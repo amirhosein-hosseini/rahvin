@@ -13,7 +13,7 @@ const DesktopHero = () => {
     useEffect(()=>{
         const controller = new AbortController();
 
-        axios.get('http://rahvin.ir/api/v1/sliders', {
+        axios.get('http://172.16.16.210:7500/api/v1/sliders', {
             signal: controller.signal
     })
         .then(function (response) {
@@ -35,7 +35,7 @@ const DesktopHero = () => {
         <div>
             <Carousel>
                 {sliders.map((item)=>(
-                    <HomeHeroItem title={item.slider_item.title} desc={item.slider_item.description} slug={item.slider_item.slug} date={item.slider_item.created_at} src={"http://rahvin.ir"+item.slider_item.cover_image
+                    <HomeHeroItem title={item.slider_item.title} desc={item.slider_item.description} slug={item.slider_item.slug} date={item.slider_item.created_at} src={"http://172.16.16.210:7500"+item.slider_item.cover_image
                     } clas={item.class}/>
                 ))}
             </Carousel>

@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function Introduction({ params }){
     const [blogs , setBlogs] = useState([])
-    const url = decodeURIComponent(`http://rahvin.ir/api/v1/categories/${params.slug}`)
+    const url = decodeURIComponent(`http://172.16.16.210:7500/api/v1/categories/${params.slug}`)
 
 
     useEffect(()=>{

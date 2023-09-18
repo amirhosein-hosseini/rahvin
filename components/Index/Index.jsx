@@ -20,7 +20,7 @@ const Index = () => {
     const [searchBar , setSearchBar] = useState("")
 
     useEffect(()=>{
-        axios.get('http://rahvin.ir/api/v1/categories/favorite')
+        axios.get('http://172.16.16.210:7500/api/v1/categories/favorite')
         .then(function (response) {
             // handle success
             setSliders(response.data.data)
@@ -31,7 +31,7 @@ const Index = () => {
           })
     },[])
     useEffect(()=>{
-        axios.get('http://rahvin.ir/api/v1/podcasts')
+        axios.get('http://172.16.16.210:7500/api/v1/podcasts')
         .then(function (response) {
             // handle success
             setPodcasts(response.data.data)
@@ -54,7 +54,7 @@ const Index = () => {
     }
 
     const searchHandle = () =>{
-        axios.get(`http://rahvin.ir/api/v1/global-search?keyword=${searchBar}`)
+        axios.get(`http://172.16.16.210:7500/api/v1/global-search?keyword=${searchBar}`)
         .then(function (response) {
             // handle success
             setSearch(response.data.data)
@@ -99,7 +99,7 @@ const Index = () => {
                                 </div>
                                 <Slideshow>
                                     {blogssearch.map((item)=>(
-                                        <ProductItem title={item.title} desc={item.description} src={"http://rahvin.ir"+item.cover_file} slug={item.slug} clas={item.class}/>
+                                        <ProductItem title={item.title} desc={item.description} src={"http://172.16.16.210:7500"+item.cover_file} slug={item.slug} clas={item.class}/>
                                     ))}
                                 </Slideshow>
                             </div> : <div></div>
@@ -113,7 +113,7 @@ const Index = () => {
                                 </div>
                                 <Slideshow>
                                     {podcastsearch.map((item)=>(
-                                        <ProductItem title={item.title} desc={item.description} src={"http://rahvin.ir"+item.cover_file} slug={item.slug} clas={item.class}/>
+                                        <ProductItem title={item.title} desc={item.description} src={"http://172.16.16.210:7500"+item.cover_file} slug={item.slug} clas={item.class}/>
                                     ))}
                                 </Slideshow>
                             </div> : <div></div>
@@ -129,7 +129,7 @@ const Index = () => {
                     </div>
                     <Slideshow>
                         {item.items.map((itemy)=>(
-                            <ProductItem title={itemy.title} desc={itemy.description} src={"http://rahvin.ir"+itemy.cover_file} slug={itemy.slug} clas={itemy.class}/>
+                            <ProductItem title={itemy.title} desc={itemy.description} src={"http://172.16.16.210:7500"+itemy.cover_file} slug={itemy.slug} clas={itemy.class}/>
                         ))}
                     </Slideshow>
                 </div>
@@ -143,7 +143,7 @@ const Index = () => {
                     </div>
                     <Slideshow>
                         {podcastss.map((item) => (
-                            <ProductItem title={item.title} desc={item.description} src={"http://rahvin.ir"+item.cover_file} slug={item.slug} clas={item.class}/>
+                            <ProductItem title={item.title} desc={item.description} src={"http://172.16.16.210:7500"+item.cover_file} slug={item.slug} clas={item.class}/>
                         ))}
                     </Slideshow>
                 </div>

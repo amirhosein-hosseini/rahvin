@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function Page({ params }) {
     const [blog , setBlog] = useState([])
     const [rela , setRela] = useState([])
-    const url = decodeURIComponent(`http://rahvin.ir/api/v1/blogs/${params.slug}`)
+    const url = decodeURIComponent(`http://172.16.16.210:7500/api/v1/blogs/${params.slug}`)
 
     useEffect(()=>{
         axios.get(url)

@@ -12,7 +12,7 @@ const Podcastc = () =>{
     useEffect(()=>{
         const controller = new AbortController();
 
-        axios.get('http://rahvin.ir/api/v1/podcasts', {
+        axios.get('http://172.16.16.210:7500/api/v1/podcasts', {
             signal: controller.signal
     })
         .then(function (response) {
@@ -46,7 +46,7 @@ const Podcastc = () =>{
                 </p>
                 <div className="podcast-items-wrapper">
                     {podcasts.map((item)=>(
-                        <PodcastItem src={"http://rahvin.ir"+item.cover_file} title={item.title} desc={item.description} instagram={item.podcastLink.اینستاگرام} youtube={item.podcastLink.یوتیوب} castbox={item.podcastLink["کست باکس"]} aparat={item.podcastLink.آپارات}/>
+                        <PodcastItem src={"http://172.16.16.210:7500"+item.cover_file} title={item.title} desc={item.description} instagram={item.podcastLink.اینستاگرام} youtube={item.podcastLink.یوتیوب} castbox={item.podcastLink["کست باکس"]} aparat={item.podcastLink.آپارات}/>
                     ))}
                 </div>
             </div>

@@ -34,7 +34,7 @@ const Introductionc = ({title , items , desc , category}) => {
             </div>
             <div className="introduction-wrapper">
                 {itemss.map((item)=>(
-                    <ProductItem title={item.title} desc={item.description} src={"http://rahvin.ir" + item.cover_file} slug={item.slug} clas={item.class} />
+                    <ProductItem title={item.title} desc={item.description} src={"172.16.16.210:7500" + item.cover_file} slug={item.slug} clas={item.class} />
                 ))}
             </div>
         </div>
